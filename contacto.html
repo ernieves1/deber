@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>LineTour-Contacto</title> 
+    <link rel="stylesheet" href="css/estilos.css">    
+</head>
+<body>
+    <section class="correotel">        
+        <ul class="cab_links">
+            <li><a class="link" href="contacto.html">Telf: 099 683 8313 </a></li>
+            <li>Correo: ernieves1@utpl.edu.ec</li>
+        </ul>
+        <ul class="cab_links2 correotel">
+            <li><a class="link" href="https://www.facebook.com/ricardo.nieves1/">Facebook</a></li>
+            <li><a class="link" href="https://twitter.com/RichyNieves">Twitter</a></li>
+        </ul>
+    </section>
+    <header class="cabecera">        
+            <span class="tituloempre">Line Tour</span>
+            <span class="tituloempre2">Viaje Seguro</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <li><a class="linkmenu" href="#">Contacto</a></li>
+                </ul>
+            </nav>                   
+    </header>
+    <section>
+        <img  class="imge" src="img/banner-slide-1.jpg" alt="Line Tour">
+    </section>
+    <section> 
+        <span class="pag1">CONTACTO</span>
+        <span class="pag2">Inicio / Contacto</span>                  
+    </section>
+    <hr/>    
+    <section class="titcentrado">
+        <h1>Enviar un Mensaje</h1>
+        <p>Su dirección de correo electrónico no será publicada. Los campos requeridos están marcados con<strong> *.</strong></p>
+        <div>
+            <form title="Formulario Usuarios" action="#" method="post" name="form1" onsubmit='return validar();'>
+                <div>
+                    <label type="text">Nombres:* </label><input type="text" title="Nombre" id="nombres" placeholder="Ingrese sus Nombres" required /><br>
+                    <label type="text">Apellidos:*</label><input type="text" title="Apellidos" id="apellidos" placeholder="Ingrese sus Apellidos" required /><br>
+                    <label type="text">Correo E: *</label><input type="text" title="Email" id="correo" placeholder="Ingrese su Correo" required /><br>
+                    <label type="text">Mensaje: * </label><input type="text" title="Box" id="mensaje" placeholder="Ingrese su Mensaje" size=60 required /><br>
+                    <label type="text">Usted ha leido y acepta los terminos y condiciones.</label>
+                    <input type='checkbox' value='SI' id='acepto' required /><br><br>           
+                    <button type="submit">Enviar Mensaje</button>
+                    <div class="validation"></div>
+                </div>
+            </form>
+            <script>
+                function validar(){
+                var todo_correcto = true;
+                if(document.getElementById('nombres').value.length < 7 ){
+                    todo_correcto = false;
+                }
+                if(document.getElementById('apellidos').value.length < 7 ){
+                    todo_correcto = false;
+                }
+                if(document.getElementById('correo').value.length < 7 ){
+                    todo_correcto = false;
+                }
+                if(document.getElementById('mensaje').value.length < 4 ){
+                    todo_correcto = false;
+                }
+                if(!document.getElementById('acepto').checked){
+                    todo_correcto = false;
+                }
+                if(!todo_correcto){
+                    alert('Algunos campos no están correctos, vuelva a revisarlos');
+                }
+                if(todo_correcto){
+                    alert('Felicidades - Correo enviado satisfactoriamente.');
+                }
+                return todo_correcto;
+                }
+            </script>
+        </div>        
+    </section> 
+    <hr/>
+    <section class="bloques2">
+        <div class="left">
+            <aside>
+                <h1>Listado de Empleados</h1>
+                <ol class="list">
+                    <li>Luis Galarza</li>
+                    <li>Evelyn Lopez</li>
+                    <li>Anderson Lasso</li>
+                    <li>Matias Gordillo</li>
+                    <li>Jhosue Montenegro</li>
+                </ol>
+            </aside>
+        </div>
+        <div class="right">
+            <aside>
+                <h1>Lista de Servicios</h1>
+                <ul class="list">
+                    <li>Trasporte</li>
+                    <li>Encomiendas</li>
+                    <li>Escolar</li>
+                    <li>Inter Provincial</li>
+                    <li>Internacional</li>
+                </ul>
+            </aside>
+        </div>
+    </section> 
+    <section class="titcentrado">
+        <h2>Seguridad al Viajar</h2>
+        <p>
+            <iframe width="50%" height="315" src="https://www.youtube.com/embed/Sd4DqbuH_5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+    </section> 
+    <footer> 
+        <div>
+            Desarrollado por: Ricardo Nieves Guamán <a class="link" href="#">Copyright © LineTour 2020-2021</a>
+        </div>
+    </footer>
+ </body>
+ </html>
